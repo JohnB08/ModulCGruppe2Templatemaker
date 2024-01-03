@@ -48,7 +48,7 @@ const template3SetUp = {
     descTextClass: "template3DescText",
     descText:
       "This is a landingpage template <br> a great place to introduce yourself and your product! <br> something to hook and grab the user's attention.",
-    mainImage: "Image/mainImage/coffeimage main.webp",
+    mainImage: "./Image/mainImage/coffeimage main.webp",
     mainImageClass: "template3mainImage",
     mainImageContainerClass: "template3mainImageContainer",
   },
