@@ -4,6 +4,14 @@
   box-sizing: border-box;
   transition: 200ms;
 }
+/* Denne er her for å fjerne base styling fra knappen */
+.menuBtn {
+  border: 0;
+  background: 0;
+}
+
+/* Template 3 styling */
+
 .template3Body {
   display: grid;
   place-content: center;
@@ -64,10 +72,6 @@
   font-weight: 400;
   font-size: 2rem;
   line-height: 150%;
-}
-.menuBtn {
-  border: 0;
-  background: 0;
 }
 .template3buttonImage {
   border: 0;
