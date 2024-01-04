@@ -11,6 +11,12 @@ const mainTextContainer = document.querySelector(".mainTextContainer");
 const subText = document.querySelector(".subHeader");
 const descText = document.querySelector(".description");
 
+let currentClassList = [];
+
+let currentSetup = {};
+
+/* Template 3 info */
+
 const template3ClassList = [
   ".template3Body",
   ".template3Header",
@@ -24,10 +30,6 @@ const template3ClassList = [
   ".template3mainImageContainer",
   ".template3mainImage",
 ];
-
-let currentClassList = [];
-
-let currentSetup = {};
 
 const template3SetUp = {
   body: { bodyClass: "template3Body" },
@@ -54,10 +56,20 @@ const template3SetUp = {
   },
 };
 
+/* template switcher */
+
+/**
+ * Function that switches the pagedesign based on template
+ * @param {*} object the object containing textinfo, images and so on.
+ * @param {*} array the array containing all classes added to the page
+ */
 const stylePage = (object, array) => {
   currentClassList.forEach((className) => {
-    activeElement = document.querySelector(className);
-    activeElement.classList.remove(className);
+    let activeElement = document.querySelector(className);
+    if (!activeElement) return;
+    else {
+      activeElement.classList.remove(className);
+    }
   });
   currentClassList = array;
   document.body.classList.add(object.body.bodyClass);
@@ -77,6 +89,50 @@ const stylePage = (object, array) => {
   descText.innerHTML = object.main.descText;
   subText.classList.add(object.main.subHeadTextClass);
   descText.classList.add(object.main.descTextClass);
+};
+
+/* TemplateSwitch Menu */
+
+let menuOpen = false;
+
+menuBtn.addEventListener("click", () => {
+  menuOpen ? closeMenu() : openMenu();
+});
+
+const subMenu = document.createElement("div");
+const subMenuTemplate1Btn = document.createElement("button");
+subMenuTemplate1Btn.innerText = "Choose Template 1";
+/* subMenuTemplate1Btn.addEventListener(
+  "click",
+  stylePage(template1SetUp, template1ClassList)
+); */
+subMenu.appendChild(subMenuTemplate1Btn);
+const subMenuTemplate2Btn = document.createElement("button");
+subMenuTemplate2Btn.innerText = "Choose Template 2";
+/* subMenuTemplate2Btn.addEventListener(
+  "click",
+  stylePage(template2SetUp, template2ClassList)
+); */
+subMenu.appendChild(subMenuTemplate2Btn);
+const subMenuTemplate3Btn = document.createElement("button");
+subMenuTemplate3Btn.innerText = "Choose Template 3";
+subMenuTemplate1Btn.addEventListener(
+  "click",
+  stylePage(template3SetUp, template3ClassList)
+);
+subMenu.appendChild(subMenuTemplate3Btn);
+subMenu.classList.add("subMenu");
+document.body.append(subMenu);
+
+const closeMenu = () => {
+  subMenu.classList.remove("showMenu");
+  menuOpen = false;
+  menuBtn.classList.remove("menuBtnDark");
+};
+const openMenu = () => {
+  subMenu.classList.add("showMenu");
+  menuOpen = true;
+  menuBtn.classList.add("menuBtnDark");
 };
 
 stylePage(template3SetUp, template3ClassList);
