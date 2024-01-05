@@ -24,6 +24,19 @@ const template3ClassList = [
   ".template3mainImageContainer",
   ".template3mainImage",
 ];
+const template2ClassList = [
+  ".template2Body",
+  ".template2Header",
+  ".template2HeaderText",
+  ".template2headerImageContainer",
+  ".template2ButtonImage",
+  ".template2Main",
+  ".template2SubText",
+  ".template2DescText",
+  ".template2mainTextContainer",
+  ".template2mainImageContainer",
+  ".template2mainImage",
+];
 
 let currentClassList = [];
 
@@ -53,6 +66,31 @@ const template3SetUp = {
     mainImageContainerClass: "template3mainImageContainer",
   },
 };
+//template 2
+const template2SetUp = {
+  body: { bodyClass: "template2Body" },
+  header: {
+    headerClass: "template2Header",
+    text: "Kjøtt fyfaen",
+    textClass: "template2HeaderText",
+    image: "./Image/headerImage/wagyu.jpg",
+    imageContainerClass: "template2headerImageContainer",
+    buttonImage: "./Image/headerImage/solar_hamburger-menu-linear.svg",
+    buttonImageClass: "template2ButtonImage",
+  },
+  main: {
+    mainClass: "template2Main",
+    mainTextContainerClass: "template3mainTextContainer",
+    subHeadText: "Hello! <br> and Welcome!",
+    subHeadTextClass: "template2SubText",
+    descTextClass: "template2DescText",
+    descText:
+      "This is a landingpage template <br> a great place to introduce yourself and your product! <br> something to hook and grab the user's attention.",
+    mainImage: "./Image/mainImage/raw steak.avif",
+    mainImageClass: "template2mainImage",
+    mainImageContainerClass: "template2mainImageContainer",
+  },
+};
 
 const stylePage = (object, array) => {
   currentClassList.forEach((className) => {
@@ -79,4 +117,4 @@ const stylePage = (object, array) => {
   descText.classList.add(object.main.descTextClass);
 };
 
-stylePage(template3SetUp, template3ClassList);
+stylePage(template2SetUp, template2ClassList);
