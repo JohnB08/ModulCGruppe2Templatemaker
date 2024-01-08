@@ -43,7 +43,6 @@ const template2ClassList = [
   ".template2mainImageContainer",
   ".template2mainImage",
 ];
-
 const template3SetUp = {
   body: { bodyClass: "template3Body" },
   header: {
@@ -88,7 +87,7 @@ const template2SetUp = {
     descTextClass: "template2DescText",
     descText:
       "This is a landingpage template <br> a great place to introduce yourself and your product! <br> something to hook and grab the user's attention.",
-    mainImage: "./Image/mainImage/raw steak.avif",
+    mainImage: "./Image/mainImage/raw_steak.avif",
     mainImageClass: "template2mainImage",
     mainImageContainerClass: "template2mainImageContainer",
   },
@@ -102,11 +101,15 @@ const template2SetUp = {
  * @param {*} array the array containing all classes added to the page
  */
 const stylePage = (object, array) => {
+  console.log(currentClassList);
   currentClassList.forEach((className) => {
     let activeElement = document.querySelector(className);
+    console.log(activeElement);
     if (!activeElement) return;
     else {
-      activeElement.classList.remove(className);
+      const normalizedClassName = className.split(".").pop();
+      console.log(normalizedClassName);
+      activeElement.classList.remove(normalizedClassName);
     }
   });
   currentClassList = array;
@@ -129,8 +132,8 @@ const stylePage = (object, array) => {
   descText.classList.add(object.main.descTextClass);
 };
 
-
 stylePage(template2SetUp, template2ClassList);
+console.log(currentClassList);
 /* TemplateSwitch Menu */
 
 let menuOpen = false;
@@ -149,15 +152,13 @@ subMenuTemplate1Btn.innerText = "Choose Template 1";
 subMenu.appendChild(subMenuTemplate1Btn);
 const subMenuTemplate2Btn = document.createElement("button");
 subMenuTemplate2Btn.innerText = "Choose Template 2";
-/* subMenuTemplate2Btn.addEventListener(
-  "click",
+subMenuTemplate2Btn.addEventListener("click", () =>
   stylePage(template2SetUp, template2ClassList)
-); */
+);
 subMenu.appendChild(subMenuTemplate2Btn);
 const subMenuTemplate3Btn = document.createElement("button");
 subMenuTemplate3Btn.innerText = "Choose Template 3";
-subMenuTemplate1Btn.addEventListener(
-  "click",
+subMenuTemplate3Btn.addEventListener("click", () =>
   stylePage(template3SetUp, template3ClassList)
 );
 subMenu.appendChild(subMenuTemplate3Btn);
@@ -174,4 +175,3 @@ const openMenu = () => {
   menuOpen = true;
   menuBtn.classList.add("menuBtnDark");
 };
-

@@ -87,7 +87,7 @@
   display: grid;
   place-content: center;
   position: relative;
-  background-color: #A3A1F9;
+  background-color: #a3a1f9;
 }
 .template2Header {
   display: flex;
@@ -103,10 +103,10 @@
 .template2headerImageContainer {
   margin-right: auto;
 }
-  .template2headerImageContainer img {
-    border-radius: 10%;
-    height: 5vh;
-    width: 5vh;
+.template2headerImageContainer img {
+  border-radius: 10%;
+  height: 5vh;
+  width: 5vh;
 }
 .template2mainImage {
   max-height: 100vh;
@@ -124,8 +124,8 @@
   padding: 4rem 2rem;
   border-width: 2rem;
   justify-content: space-between;
-    background-color: #9EFF86 ;
-    border-radius: 2%;
+  background-color: #9eff86;
+  border-radius: 2%;
 }
 .template2mainTextContainer {
   margin-left: auto;
@@ -153,6 +153,7 @@
 .template2buttonImage {
   border: 0;
   background: 0;
+}
 
 .subMenu {
   display: none;
@@ -167,5 +168,4 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-
 }
