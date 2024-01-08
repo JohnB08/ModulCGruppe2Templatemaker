@@ -17,7 +17,7 @@ let currentSetup = {};
 
 /* Template 3 info */
 
-const template3ClassList = [
+const template1ClassList = [
   ".template3Body",
   ".template3Header",
   ".template3HeaderText",
@@ -62,8 +62,8 @@ const template1SetUp = {
     headerClass: "template1Header",
     text: "Come and get your car!",
     textClass: "template1HeaderText",
-    image: "./Image/headerImage/grommet-icons_coffee.svg",
-    imageContainerClass: "template3headerImageContainer",
+    image: "./",
+    imageContainerClass: "template1headerImageContainer",
     buttonImage: "./Image/headerImage/solar_hamburger-menu-linear.svg",
     buttonImageClass: "template3ButtonImage",
   },
@@ -75,7 +75,7 @@ const template1SetUp = {
     descTextClass: "template1DescText",
     descText:
       "Welcome to Alex's car dealership! <br> We're the most secure car business in town! <br> You'll get a car that's worth your money.",
-    mainImage: "../image/mainImage/Half_of_the_front_of_a_blue_car.jpg",
+    mainImage: "../image/mainImage/Half_of_the_front_of_a_blue_car.jpg.jpg",
     mainImageClass: "template1mainImage",
     mainImageContainerClass: "template1mainImageContainer",
   },
@@ -141,7 +141,7 @@ subMenuTemplate2Btn.innerText = "Choose Template 2";
 ); */
 subMenu.appendChild(subMenuTemplate2Btn);
 const subMenuTemplate3Btn = document.createElement("button");
-subMenuTemplate3Btn.innerText = "Choose Template 3";
+subMenuTemplate1Btn.innerText = "Choose Template 3";
 subMenuTemplate1Btn.addEventListener(
   "click",
   stylePage(template3SetUp, template3ClassList)
@@ -161,4 +161,11 @@ const openMenu = () => {
   menuBtn.classList.add("menuBtnDark");
 };
 
-stylePage(template3SetUp, template3ClassList);
+stylePage(template1SetUp, template1ClassList);
+
+
+
+const img = document.getElementById("img");
+
+
+

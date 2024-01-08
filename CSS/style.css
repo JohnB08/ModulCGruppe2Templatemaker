@@ -15,27 +15,27 @@
 }
 /* Template 3 styling */
 
-.template3Body {
+.template1Body {
   display: grid;
   place-content: center;
   position: relative;
   background-color: #486b38;
 }
-.template3Header {
+.template1Header {
   display: flex;
   width: 80rem;
   padding: 4rem 0;
 }
-.template3HeaderText {
+.template1HeaderText {
   font-family: "Quattrocento", serif;
   font-weight: 700;
   font-size: 4rem;
   color: #f2edcf;
 }
-.template3headerImageContainer {
+.template1headerImageContainer {
   margin-right: auto;
 }
-.template3mainImage {
+.template1mainImage {
   max-height: 100vh;
   position: absolute;
   aspect-ratio: auto;
@@ -44,12 +44,12 @@
   z-index: -1;
 }
 
-.template3Main {
+.template1Main {
   display: flex;
   margin: 4rem 0;
   padding: 4rem 2rem;
   border-width: 2rem;
-  border-image-source: url("../Image/mainImage/BorderImage.png");
+  border-image-source: url("../Image/mainImage/Half_of_the_front_of_a_blue_car.jpg.jpg");
   border-image-slice: 25%;
   border-image-width: 6.5rem;
 }
