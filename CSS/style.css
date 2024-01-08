@@ -13,6 +13,15 @@
 .menuBtnDark {
   filter: invert(100%);
 }
+
+/* quick transition on all base classes */
+
+.mainHeader {
+  transition: 250ms;
+}
+.mainSection {
+  transition: 250ms;
+}
 /* Template 3 styling */
 
 .template3Body {
@@ -164,8 +173,23 @@
   right: 0;
   background-color: #f2edcf;
 }
+.subMenu button {
+  width: 80%;
+  background: 0;
+  padding: 1rem 2rem;
+  background-color: #0d1821;
+  color: #f2edcf;
+  border: 0;
+  border-radius: 0.5rem;
+}
+.subMenu button:hover {
+  color: #0d1821;
+  background: none;
+  cursor: pointer;
+}
 .showMenu {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
 }
