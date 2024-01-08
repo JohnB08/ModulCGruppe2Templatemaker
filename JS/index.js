@@ -30,7 +30,7 @@ const template3ClassList = [
   ".template3mainImageContainer",
   ".template3mainImage",
 ];
-
+/* 
 const template3SetUp = {
   body: { bodyClass: "template3Body" },
   header: {
@@ -54,7 +54,7 @@ const template3SetUp = {
     mainImageClass: "template3mainImage",
     mainImageContainerClass: "template3mainImageContainer",
   },
-};
+}; */
 
 const template1SetUp = {
   body: { bodyClass: "template1Body" },
