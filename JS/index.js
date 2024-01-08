@@ -88,7 +88,7 @@ const template2SetUp = {
     descTextClass: "template2DescText",
     descText:
       "This is a landingpage template <br> a great place to introduce yourself and your product! <br> something to hook and grab the user's attention.",
-    mainImage: "./Image/mainImage/raw steak.avif",
+    mainImage: "./Image/mainImage/raw_steak.jpg",
     mainImageClass: "template2mainImage",
     mainImageContainerClass: "template2mainImageContainer",
   },
