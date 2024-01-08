@@ -56,6 +56,32 @@ const template3SetUp = {
   },
 };
 
+const template1SetUp = {
+  body: { bodyClass: "template1Body" },
+  header: {
+    headerClass: "template1Header",
+    text: "Come and get your car!",
+    textClass: "template1HeaderText",
+    image: "./Image/headerImage/grommet-icons_coffee.svg",
+    imageContainerClass: "template3headerImageContainer",
+    buttonImage: "./Image/headerImage/solar_hamburger-menu-linear.svg",
+    buttonImageClass: "template3ButtonImage",
+  },
+  main: {
+    mainClass: "template1Main",
+    mainTextContainerClass: "template1mainTextContainer",
+    subHeadText: "Hello! <br> and Welcome!",
+    subHeadTextClass: "template3SubText",
+    descTextClass: "template1DescText",
+    descText:
+      "Welcome to Alex's car dealership! <br> We're the most secure car business in town! <br> You'll get a car that's worth your money.",
+    mainImage: "../image/mainImage/Half_of_the_front_of_a_blue_car.jpg",
+    mainImageClass: "template1mainImage",
+    mainImageContainerClass: "template1mainImageContainer",
+  },
+};
+
+
 /* template switcher */
 
 /**
