@@ -204,11 +204,17 @@ subMenu.appendChild(subMenuTemplate3Btn);
 subMenu.classList.add("subMenu");
 document.body.append(subMenu);
 
+/**
+ * Function that closes the menu if open
+ */
 const closeMenu = () => {
   subMenu.classList.remove("showMenu");
   menuOpen = false;
   menuBtn.classList.remove("menuBtnDark");
 };
+/**
+ * Function that opens the menu if closed
+ */
 const openMenu = () => {
   subMenu.classList.add("showMenu");
   menuOpen = true;
