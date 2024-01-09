@@ -161,11 +161,6 @@ const openMenu = () => {
   menuBtn.classList.add("menuBtnDark");
 };
 
-stylePage(template1SetUp, template1ClassList);
-
-
-
-const img = document.getElementById("img");
 
 
 
