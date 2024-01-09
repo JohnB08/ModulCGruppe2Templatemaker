@@ -17,18 +17,18 @@ let currentSetup = {};
 
 /* Template 3 info */
 
-const template3ClassList = [
-  ".template3Body",
-  ".template3Header",
-  ".template3HeaderText",
-  ".template3headerImageContainer",
-  ".template3ButtonImage",
-  ".template3Main",
-  ".template3SubText",
-  ".template3DescText",
-  ".template3mainTextContainer",
-  ".template3mainImageContainer",
-  ".template3mainImage",
+const template1ClassList = [
+  ".template1Body",
+  ".template1Header",
+  ".template1HeaderText",
+  ".template1headerImageContainer",
+  ".template1ButtonImage",
+  ".template1Main",
+  ".template1SubText",
+  ".template1DescText",
+  ".template1mainTextContainer",
+  ".template1mainImageContainer",
+  ".template1mainImage",
 ];
 const template2ClassList = [
   ".template2Body",
@@ -67,6 +67,7 @@ const template3SetUp = {
     mainImageContainerClass: "template3mainImageContainer",
   },
 };
+};
 //template 2
 const template2SetUp = {
   body: { bodyClass: "template2Body" },
@@ -99,8 +100,8 @@ const template1SetUp = {
     headerClass: "template1Header",
     text: "Come and get your car!",
     textClass: "template1HeaderText",
-    image: "./Image/headerImage/grommet-icons_coffee.svg",
-    imageContainerClass: "template3headerImageContainer",
+    image: "../image/headerImage/car-sport.svg",
+    imageContainerClass: "template1headerImageContainer",
     buttonImage: "./Image/headerImage/solar_hamburger-menu-linear.svg",
     buttonImageClass: "template3ButtonImage",
   },
@@ -108,11 +109,11 @@ const template1SetUp = {
     mainClass: "template1Main",
     mainTextContainerClass: "template1mainTextContainer",
     subHeadText: "Hello! <br> and Welcome!",
-    subHeadTextClass: "template3SubText",
+    subHeadTextClass: "template1SubText",
     descTextClass: "template1DescText",
     descText:
       "Welcome to Alex's car dealership! <br> We're the most secure car business in town! <br> You'll get a car that's worth your money.",
-    mainImage: "../image/mainImage/Half_of_the_front_of_a_blue_car.jpg",
+    mainImage: "../image/mainImage/Half_of_the_front_of_a_blue_car.jpg.jpg",
     mainImageClass: "template1mainImage",
     mainImageContainerClass: "template1mainImageContainer",
   },
