@@ -15,7 +15,7 @@ let currentClassList = [];
 
 let currentSetup = {};
 
-/* Template 3 info */
+/* Template classLists */
 
 const template1ClassList = [
   ".template1Body",
@@ -43,32 +43,46 @@ const template2ClassList = [
   ".template2mainImageContainer",
   ".template2mainImage",
 ];
-const template3SetUp = {
-  body: { bodyClass: "template3Body" },
+
+const template3ClassList = [
+  ".template3Body",
+  ".template3HeaderText",
+  ".template3Header",
+  ".template3headerImageContainer",
+  ".template3ButtonImage",
+  ".template3Main",
+  ".template3SubText",
+  ".template3DescText",
+  ".template3mainTextContainer",
+  ".template3mainImageContainer",
+  ".template3mainImage",
+];
+
+/* Template Info */
+const template1SetUp = {
+  body: { bodyClass: "template1Body" },
   header: {
-    headerClass: "template3Header",
-    text: "Early Morning Gourmet",
-    textClass: "template3HeaderText",
-    image: "./Image/headerImage/grommet-icons_coffee.svg",
-    imageContainerClass: "template3headerImageContainer",
+    headerClass: "template1Header",
+    text: "Come and get your car!",
+    textClass: "template1HeaderText",
+    image: "../image/headerImage/car-sport.svg",
+    imageContainerClass: "template1headerImageContainer",
     buttonImage: "./Image/headerImage/solar_hamburger-menu-linear.svg",
     buttonImageClass: "template3ButtonImage",
   },
   main: {
-    mainClass: "template3Main",
-    mainTextContainerClass: "template3mainTextContainer",
+    mainClass: "template1Main",
+    mainTextContainerClass: "template1mainTextContainer",
     subHeadText: "Hello! <br> and Welcome!",
-    subHeadTextClass: "template3SubText",
-    descTextClass: "template3DescText",
+    subHeadTextClass: "template1SubText",
+    descTextClass: "template1DescText",
     descText:
-      "This is a landingpage template <br> a great place to introduce yourself and your product! <br> something to hook and grab the user's attention.",
-    mainImage: "./Image/mainImage/coffeimage main.webp",
-    mainImageClass: "template3mainImage",
-    mainImageContainerClass: "template3mainImageContainer",
+      "Welcome to Alex's car dealership! <br> We're the most secure car business in town! <br> You'll get a car that's worth your money.",
+    mainImage: "../image/mainImage/Half_of_the_front_of_a_blue_car.jpg.jpg",
+    mainImageClass: "template1mainImage",
+    mainImageContainerClass: "template1mainImageContainer",
   },
 };
-};
-//template 2
 const template2SetUp = {
   body: { bodyClass: "template2Body" },
   header: {
@@ -94,31 +108,30 @@ const template2SetUp = {
   },
 };
 
-const template1SetUp = {
-  body: { bodyClass: "template1Body" },
+const template3SetUp = {
+  body: { bodyClass: "template3Body" },
   header: {
-    headerClass: "template1Header",
-    text: "Come and get your car!",
-    textClass: "template1HeaderText",
-    image: "../image/headerImage/car-sport.svg",
-    imageContainerClass: "template1headerImageContainer",
+    headerClass: "template3Header",
+    text: "Early Morning Gourmet",
+    textClass: "template3HeaderText",
+    image: "./Image/headerImage/grommet-icons_coffee.svg",
+    imageContainerClass: "template3headerImageContainer",
     buttonImage: "./Image/headerImage/solar_hamburger-menu-linear.svg",
     buttonImageClass: "template3ButtonImage",
   },
   main: {
-    mainClass: "template1Main",
-    mainTextContainerClass: "template1mainTextContainer",
+    mainClass: "template3Main",
+    mainTextContainerClass: "template3mainTextContainer",
     subHeadText: "Hello! <br> and Welcome!",
-    subHeadTextClass: "template1SubText",
-    descTextClass: "template1DescText",
+    subHeadTextClass: "template3SubText",
+    descTextClass: "template3DescText",
     descText:
-      "Welcome to Alex's car dealership! <br> We're the most secure car business in town! <br> You'll get a car that's worth your money.",
-    mainImage: "../image/mainImage/Half_of_the_front_of_a_blue_car.jpg.jpg",
-    mainImageClass: "template1mainImage",
-    mainImageContainerClass: "template1mainImageContainer",
+      "This is a landingpage template <br> a great place to introduce yourself and your product! <br> something to hook and grab the user's attention.",
+    mainImage: "./Image/mainImage/coffeimage main.webp",
+    mainImageClass: "template3mainImage",
+    mainImageContainerClass: "template3mainImageContainer",
   },
 };
-
 
 /* template switcher */
 
@@ -172,10 +185,9 @@ menuBtn.addEventListener("click", () => {
 const subMenu = document.createElement("div");
 const subMenuTemplate1Btn = document.createElement("button");
 subMenuTemplate1Btn.innerText = "Choose Template 1";
-/* subMenuTemplate1Btn.addEventListener(
-  "click",
+subMenuTemplate1Btn.addEventListener("click", () =>
   stylePage(template1SetUp, template1ClassList)
-); */
+);
 subMenu.appendChild(subMenuTemplate1Btn);
 const subMenuTemplate2Btn = document.createElement("button");
 subMenuTemplate2Btn.innerText = "Choose Template 2";
