@@ -30,7 +30,19 @@ const template1ClassList = [
   ".template1mainImageContainer",
   ".template1mainImage",
 ];
-/* 
+const template2ClassList = [
+  ".template2Body",
+  ".template2Header",
+  ".template2HeaderText",
+  ".template2headerImageContainer",
+  ".template2ButtonImage",
+  ".template2Main",
+  ".template2SubText",
+  ".template2DescText",
+  ".template2mainTextContainer",
+  ".template2mainImageContainer",
+  ".template2mainImage",
+];
 const template3SetUp = {
   body: { bodyClass: "template3Body" },
   header: {
@@ -54,7 +66,33 @@ const template3SetUp = {
     mainImageClass: "template3mainImage",
     mainImageContainerClass: "template3mainImageContainer",
   },
-}; */
+};
+};
+//template 2
+const template2SetUp = {
+  body: { bodyClass: "template2Body" },
+  header: {
+    headerClass: "template2Header",
+    text: "Kjøtt fyfaen",
+    textClass: "template2HeaderText",
+    image: "./Image/headerImage/wagyu.jpg",
+    imageContainerClass: "template2headerImageContainer",
+    buttonImage: "./Image/headerImage/solar_hamburger-menu-linear.svg",
+    buttonImageClass: "template2ButtonImage",
+  },
+  main: {
+    mainClass: "template2Main",
+    mainTextContainerClass: "template3mainTextContainer",
+    subHeadText: "Hello! <br> and Welcome!",
+    subHeadTextClass: "template2SubText",
+    descTextClass: "template2DescText",
+    descText:
+      "This is a landingpage template <br> a great place to introduce yourself and your product! <br> something to hook and grab the user's attention.",
+    mainImage: "./Image/mainImage/raw_steak.jpg",
+    mainImageClass: "template2mainImage",
+    mainImageContainerClass: "template2mainImageContainer",
+  },
+};
 
 const template1SetUp = {
   body: { bodyClass: "template1Body" },
@@ -90,11 +128,15 @@ const template1SetUp = {
  * @param {*} array the array containing all classes added to the page
  */
 const stylePage = (object, array) => {
+  console.log(currentClassList);
   currentClassList.forEach((className) => {
     let activeElement = document.querySelector(className);
+    console.log(activeElement);
     if (!activeElement) return;
     else {
-      activeElement.classList.remove(className);
+      const normalizedClassName = className.split(".").pop();
+      console.log(normalizedClassName);
+      activeElement.classList.remove(normalizedClassName);
     }
   });
   currentClassList = array;
@@ -117,6 +159,8 @@ const stylePage = (object, array) => {
   descText.classList.add(object.main.descTextClass);
 };
 
+stylePage(template2SetUp, template2ClassList);
+console.log(currentClassList);
 /* TemplateSwitch Menu */
 
 let menuOpen = false;
@@ -135,16 +179,14 @@ subMenuTemplate1Btn.innerText = "Choose Template 1";
 subMenu.appendChild(subMenuTemplate1Btn);
 const subMenuTemplate2Btn = document.createElement("button");
 subMenuTemplate2Btn.innerText = "Choose Template 2";
-/* subMenuTemplate2Btn.addEventListener(
-  "click",
+subMenuTemplate2Btn.addEventListener("click", () =>
   stylePage(template2SetUp, template2ClassList)
-); */
+);
 subMenu.appendChild(subMenuTemplate2Btn);
 const subMenuTemplate3Btn = document.createElement("button");
-subMenuTemplate1Btn.innerText = "Choose Template 3";
-subMenuTemplate1Btn.addEventListener(
-  "click",
-  stylePage(template1SetUp, template1ClassList)
+subMenuTemplate3Btn.innerText = "Choose Template 3";
+subMenuTemplate3Btn.addEventListener("click", () =>
+  stylePage(template3SetUp, template3ClassList)
 );
 subMenu.appendChild(subMenuTemplate3Btn);
 subMenu.classList.add("subMenu");
@@ -160,7 +202,3 @@ const openMenu = () => {
   menuOpen = true;
   menuBtn.classList.add("menuBtnDark");
 };
-
-
-
-
