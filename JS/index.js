@@ -18,17 +18,17 @@ let currentSetup = {};
 /* Template 3 info */
 
 const template1ClassList = [
-  ".template3Body",
-  ".template3Header",
-  ".template3HeaderText",
-  ".template3headerImageContainer",
-  ".template3ButtonImage",
-  ".template3Main",
-  ".template3SubText",
-  ".template3DescText",
-  ".template3mainTextContainer",
-  ".template3mainImageContainer",
-  ".template3mainImage",
+  ".template1Body",
+  ".template1Header",
+  ".template1HeaderText",
+  ".template1headerImageContainer",
+  ".template1ButtonImage",
+  ".template1Main",
+  ".template1SubText",
+  ".template1DescText",
+  ".template1mainTextContainer",
+  ".template1mainImageContainer",
+  ".template1mainImage",
 ];
 /* 
 const template3SetUp = {
@@ -62,7 +62,7 @@ const template1SetUp = {
     headerClass: "template1Header",
     text: "Come and get your car!",
     textClass: "template1HeaderText",
-    image: "./",
+    image: "../image/headerImage/car-sport.svg",
     imageContainerClass: "template1headerImageContainer",
     buttonImage: "./Image/headerImage/solar_hamburger-menu-linear.svg",
     buttonImageClass: "template3ButtonImage",
@@ -71,7 +71,7 @@ const template1SetUp = {
     mainClass: "template1Main",
     mainTextContainerClass: "template1mainTextContainer",
     subHeadText: "Hello! <br> and Welcome!",
-    subHeadTextClass: "template3SubText",
+    subHeadTextClass: "template1SubText",
     descTextClass: "template1DescText",
     descText:
       "Welcome to Alex's car dealership! <br> We're the most secure car business in town! <br> You'll get a car that's worth your money.",
@@ -144,7 +144,7 @@ const subMenuTemplate3Btn = document.createElement("button");
 subMenuTemplate1Btn.innerText = "Choose Template 3";
 subMenuTemplate1Btn.addEventListener(
   "click",
-  stylePage(template3SetUp, template3ClassList)
+  stylePage(template1SetUp, template1ClassList)
 );
 subMenu.appendChild(subMenuTemplate3Btn);
 subMenu.classList.add("subMenu");
