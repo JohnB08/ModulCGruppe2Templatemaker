@@ -10,6 +10,7 @@ const mainImageContainer = document.querySelector(".mainImageContainer");
 const mainTextContainer = document.querySelector(".mainTextContainer");
 const subText = document.querySelector(".subHeader");
 const descText = document.querySelector(".description");
+/* Global Variables */
 
 let currentClassList = [];
 
