@@ -66,7 +66,7 @@ const template3SetUp = {
     mainImageClass: "template3mainImage",
     mainImageContainerClass: "template3mainImageContainer",
   },
-};
+}
 //template 2
 const template2SetUp = {
   body: { bodyClass: "template2Body" },
