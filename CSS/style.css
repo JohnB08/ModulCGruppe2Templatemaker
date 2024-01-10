@@ -13,6 +13,15 @@
 .menuBtnDark {
   filter: invert(100%);
 }
+
+/* quick transition on all base classes */
+
+.mainHeader {
+  transition: 250ms;
+}
+.mainSection {
+  transition: 250ms;
+}
 /* Template 3 styling */
 
 .template1Body {
@@ -56,6 +65,7 @@
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  padding: 0 1.5rem;
   justify-content: space-around;
 }
 .template1SubText {
@@ -71,13 +81,87 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #f2edcf;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 150%;
 }
 .template1buttonImage {
   border: 0;
   background: 0;
 }
+
+/* Template 2 layout */
+.template2Body {
+  display: grid;
+  place-content: center;
+  position: relative;
+  background-color: #a3a1f9;
+}
+.template2Header {
+  display: flex;
+  width: 80rem;
+  padding: 4rem 0;
+}
+.template2HeaderText {
+  font-family: "Quattrocento", serif;
+  font-weight: 700;
+  font-size: 4rem;
+  color: #0c0b04;
+}
+.template2headerImageContainer {
+  margin-right: auto;
+}
+.template2headerImageContainer img {
+  border-radius: 10%;
+  height: 5vh;
+  width: 5vh;
+}
+.template2mainImage {
+  max-height: 100vh;
+  height: 60vh;
+  margin: 0 100px 0 0;
+  aspect-ratio: auto;
+  left: 0;
+  z-index: -1;
+  border-radius: 5%;
+}
+
+.template2Main {
+  display: flex;
+  margin: 4rem 0;
+  padding: 4rem 2rem;
+  border-width: 2rem;
+  justify-content: space-between;
+  background-color: #9eff86;
+  border-radius: 2%;
+}
+.template2mainTextContainer {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: space-around;
+}
+.template2SubText {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #0c0b04;
+  font-weight: 600;
+  line-height: 200%;
+  font-size: 3rem;
+}
+.template2DescText {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #0c0b04;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 150%;
+}
+.template2buttonImage {
+  border: 0;
+  background: 0;
+}
+
 .subMenu {
   display: none;
   height: 100vh;
@@ -87,8 +171,23 @@
   right: 0;
   background-color: #f2edcf;
 }
+.subMenu button {
+  width: 80%;
+  background: 0;
+  padding: 1rem 2rem;
+  background-color: #0d1821;
+  color: #f2edcf;
+  border: 0;
+  border-radius: 0.5rem;
+}
+.subMenu button:hover {
+  color: #0d1821;
+  background: none;
+  cursor: pointer;
+}
 .showMenu {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
 }
